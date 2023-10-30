@@ -27,6 +27,6 @@ dice.addEventListener("click", () => {
 
 // when a page loads initially we make an api call right away
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   getAdviceAndDisplayIt();
 });
