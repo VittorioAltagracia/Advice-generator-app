@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -5,23 +7,132 @@
 
 body {
   background-color: hsl(218, 23%, 16%);
+  font-family: "Manrope", sans-serif;
 }
 
 .advice-card {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  margin: 19.5rem auto;
+  max-width: 450px;
+  place-content: center;
+  grid-template-columns: 1fr;
   gap: 10px;
   color: hsl(193, 38%, 86%);
   background-color: hsl(217, 19%, 24%);
-  flex-direction: column;
+  padding: 2rem;
+  padding-bottom: 0;
+  border-radius: 11px;
+}
+
+.advice {
   font-size: 28px;
-  border: 1px solid brown;
+  text-align: center;
+  margin: 13px 0 7px;
 }
 
 .advice-num {
   color: hsl(150, 100%, 66%);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 8.5px;
 }
+
+/* button states  */
 
 button {
   background-color: hsl(150, 100%, 66%);
+  border: 0;
+  border-radius: 50%;
+  max-width: 40px;
+  padding: 0.7rem;
+  position: relative;
+  top: 20px;
+  right: -205px;
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: 0 0 20px 4px hsl(150, 100%, 66%);
+}
+
+button:hover {
+  box-shadow: 0 0 20px 4px hsl(150, 100%, 66%);
+}
+
+button svg {
+  height: 17px;
+  width: 17px;
+  fill: hsl(218, 23%, 16%);
+}
+
+/* container for lines and thick quotation marks */
+
+.quotation {
+  justify-content: center;
+  gap: 13px;
+  display: flex;
+  align-items: center;
+  margin-top: 9px;
+}
+
+/* container for thick sticks in the middle */
+
+.separator {
+  letter-spacing: 3px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  font-size: 18px;
+}
+.stick {
+  height: 10px;
+  width: 4px;
+  background-color: hsl(193, 38%, 86%);
+  border-radius: 3px;
+}
+
+.line {
+  background-color: hsl(217, 19%, 38%);
+  height: 1.3px;
+  width: 190px;
+}
+
+/* media queries handles responsiveness on mobile devices */
+
+@media screen and (max-width: 576px) {
+  .advice-card {
+    max-width: 310px;
+  }
+  .advice {
+    font-size: 18px;
+    max-width: auto;
+  }
+  .line {
+    width: 50%;
+  }
+  button {
+    right: -135px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .advice-card {
+    max-width: 290px;
+  }
+
+  button {
+    right: -125px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .advice-card {
+    max-width: 220px;
+  }
+
+  button {
+    right: -90px;
+  }
 }
